@@ -1,4 +1,4 @@
-from image_recognition import app
+from richardsonfood import app
 from flask import render_template,flash,url_for,request,session
 import os
 import sys
