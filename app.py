@@ -9,9 +9,6 @@ import base64
 
 app = Flask(__name__)
 
-# Variables
-_key = '55449c9e8cd844f9a17562e042f8088d' # Here, paste your primary key
-_maxNumRetries = 10
 
 
 @app.route('/image_rec')
@@ -34,6 +31,9 @@ def image_rec():
 
 @app.route('/classify', methods = ["GET", "POST"])
 def classify():
+    # Variables
+    _key = '55449c9e8cd844f9a17562e042f8088d'  # Here, paste your primary key
+    _maxNumRetries = 10
     _url = 'https://imagerec.cognitiveservices.azure.com/vision/v3.0/tag'
     # Read the image into a byte array
     # image_data = open(image_path, "rb").read()
