@@ -31,4 +31,4 @@ jobs:
       with:
         app-name: 'richardsonfood'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_7b444530ce044b178acb2b1a9b600c1f }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1c7cc95caec940edbe62482bda53ecfc }}
