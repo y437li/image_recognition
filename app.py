@@ -13,21 +13,7 @@ app = Flask(__name__)
 
 @app.route('/image_rec')
 def image_rec():
-    image_path = './static/image/Capture.png'
-    image_data = open(image_path, "rb").read()
-    image = Image.open(BytesIO(image_data))
-    fig = Figure(figsize=(5, 5))
-    axis = fig.add_subplot(1, 1, 1)
-    axis.axis('off')
-    axis.imshow(image)
-    pngImage = io.BytesIO()
-    FigureCanvas(fig).print_png(pngImage)
-
-    # Encode PNG image to base64 string
-    pngImageB64String = "data:image/png;base64,"
-    pngImageB64String += base64.b64encode(pngImage.getvalue()).decode('utf8')
-
-    return render_template("/image_rec.html",image =pngImageB64String)
+    return render_template("/image_rec.html")
 
 @app.route('/classify', methods = ["GET", "POST"])
 def classify():
