@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from io import BytesIO
 import os
-from werkzeug import secure_filename
 import io
 import base64
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
@@ -40,23 +39,11 @@ def image_rec():
 
 @app.route('/classify',methods = ["GET","POST"])
 def classify():
-    file = request.files['file']
-    UPLOAD_FOLDER = './image_recognition/static/image'
-    if not os.path.exists(UPLOAD_FOLDER):
-        os.makedirs(UPLOAD_FOLDER)
-    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-    filename = secure_filename(file.filename)
-    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    file_path = './image_recognition/static/image/{}'.format(filename)
-    # Set image_path to the local path of an image that you want to analyze.
-    # Sample images are here, if needed:
-    # https://github.com/Azure-Samples/cognitive-services-sample-data-files/tree/master/ComputerVision/Images
-    image_path = file_path
     _url = 'https://imagerec.cognitiveservices.azure.com/vision/v3.0/tag'
     # Read the image into a byte array
-    image_data = open(image_path, "rb").read()
+    # image_data = open(image_path, "rb").read()
 
-    image_data = open(image_path, "rb").read()
+    image_data = request.files["file"].read()
     headers = {'Ocp-Apim-Subscription-Key': _key,
                'Content-Type': 'application/octet-stream'}
     params = {'visualFeatures': 'Categories,Description,Color'}
@@ -68,13 +55,13 @@ def classify():
     # relevant caption for the image is obtained from the 'description' property.
     analysis = response.json()
     print(analysis)
-    #image_caption = analysis["description"]["captions"][0]["text"].capitalize()
+    # image_caption = analysis["description"]["captions"][0]["text"].capitalize()
     # Display the image and overlay it with the caption.
     image = Image.open(BytesIO(image_data))
-    fig = Figure(figsize=(5,5))
+    fig = Figure(figsize=(5, 5))
     axis = fig.add_subplot(1, 1, 1)
     axis.axis('off')
-    #axis.set_title(image_caption, size="x-large", y=-0.1)
+    # axis.set_title(image_caption, size="x-large", y=-0.1)
     axis.imshow(image)
 
     pngImage = io.BytesIO()
@@ -85,10 +72,10 @@ def classify():
     pngImageB64String += base64.b64encode(pngImage.getvalue()).decode('utf8')
 
     reuslt = []
-    for i in range(0,4):
+    for i in range(0, 4):
         tag = analysis['tags'][i]
         temp = []
         temp.append(tag['name'])
-        temp.append('{}%'.format(round(tag['confidence']*100)))
+        temp.append('{}%'.format(round(tag['confidence'] * 100)))
         reuslt.append(temp)
     return render_template("/image_rec.html", image=pngImageB64String, cats= reuslt)
