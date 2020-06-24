@@ -22,7 +22,7 @@ _maxNumRetries = 10
 
 @app.route('/image_rec')
 def image_rec():
-    image_path = 'C:/Users/y437l/image_recognition/static/image/Capture.png'
+    image_path = './image_recognition/static/image/Capture.png'
     image_data = open(image_path, "rb").read()
     image = Image.open(BytesIO(image_data))
     fig = Figure(figsize=(5, 5))
