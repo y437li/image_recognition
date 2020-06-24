@@ -3,7 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="0d3b8be9-f10a-46f3-8afc-7ed4c25647b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/richardsonfood/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/richardsonfood/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/Blank_square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/Capture2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/Title1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/could-icon-png-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/iconfinder_27_Cloud_183554.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/1123802561_15438807885871n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/1934418_123296467111_5934916_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/204_1908747150_l.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/Capture2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/anise-aroma-art-bazaar-277253.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/dog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/ef1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/fig2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/iStock_000014092144Small-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/istock-1143163513.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/junk-food.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/pineapple.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/image/qCZJTduKiR2SRCEwg2c7FG-650-80.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/static/loader/Preloader_3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/templates/image_rec.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/richardsonfood/views.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,15 +80,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/richardsonfood/views.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

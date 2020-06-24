@@ -1,18 +1,12 @@
-from richardsonfood import app
-from flask import render_template,flash,url_for,request,session
-import os
-import sys
+from image_recognition import app
+from flask import render_template,request
 import requests
-# If you are using a Jupyter notebook, uncomment the following line.
-import matplotlib.pyplot as plt
 from PIL import Image
 from io import BytesIO
-import os
 import io
-import base64
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
-import http.client, urllib.request, urllib.parse, urllib.error, base64
+import base64
 
 # Variables
 _key = '55449c9e8cd844f9a17562e042f8088d' # Here, paste your primary key
@@ -37,7 +31,7 @@ def image_rec():
 
     return render_template("/image_rec.html",image =pngImageB64String)
 
-@app.route('/classify',methods = ["GET","POST"])
+@app.route('/classify', methods = ["GET", "POST"])
 def classify():
     _url = 'https://imagerec.cognitiveservices.azure.com/vision/v3.0/tag'
     # Read the image into a byte array

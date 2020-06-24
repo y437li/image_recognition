@@ -1,4 +1,4 @@
-from richardsonfood import app
+from image_recognition import app
 
 if __name__ == "__main__":
     app.run()
