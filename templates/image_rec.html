@@ -1,9 +1,12 @@
+<!-- PAGE DESIGN
+For content and script to back-end (app.py), please refer to line 197 onwards 
+-->
 <!DOCTYPE html>
 <div lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!-- Call JavaScript, boostrap and Jquery packages -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -200,11 +203,14 @@ body{
 <div class="col-sm-1">
 </div>
     <div class="col-sm-11">
+        <!--Link Flask to a static file (image)  -->
         <img src="{{ url_for('static', filename='Title1.PNG')}}" width="700" id="logo2">
 </div>
 </div>
 </div>
 
+<!-- Connect to the 'classify' function defined in the back-end
+POST: data provided from client to server -->
 <div class="jumbotron text-center area" id="inputfeild">
 <form action = "{{url_for('classify')}}"  enctype="multipart/form-data" method = "POST">
 <br>
@@ -226,11 +232,11 @@ body{
     </ul>
     <br>
     <br>
+    <!-- list the 4 top results from the classifier's output -->
     <div class ="row">
        <div class = "col-sm-6">
            <img src="{{ image }}" class="rounded mx-auto d-block" id ="input">
        </div>
-
         <div class = "col-sm-6">
           <h2 style="color:white">Recognition Outcome</h2>
             <p style="color:white">Top 4 Results</p>
@@ -268,6 +274,7 @@ body{
     </div>
     </form>
     <div class = "col-sm-4">
+<!-- Submit by clicking the 'Classify' button -->       
 <button type=submit class="btn btn-primary btn-lg">Classify</button>
     </div>
 </div>
